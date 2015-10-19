@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{0A282205-D143-863E-E47C-44F2698FFC61}</ProjectGuid>
+	<ProjectGuid>{D2556B7A-7238-3F2B-9423-13F29445AF32}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -73,6 +73,11 @@
      <Compile Include="Assets\scripts\ftl\ftlLineRenderer.cs" />
      <Compile Include="Assets\scripts\ftl\ftlManager.cs" />
      <Compile Include="Assets\scripts\ftl\ftlSpeedGraph.cs" />
+     <None Include="Assets\TouchScript\Shaders\DebugDepthTest.shader" />
+     <None Include="Assets\TouchScript\license.txt" />
+     <None Include="Assets\TouchScript\Shaders\DebugMultiplyDepthTest.shader" />
+     <None Include="Assets\TouchScript\Shaders\DebugNoDepthTest.shader" />
+     <None Include="Assets\TouchScript\Shaders\DebugMultiplyNoDepthTest.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
@@ -82,20 +87,20 @@
  <Reference Include="UnityEngine.Analytics">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
- <Reference Include="OSCsharp">
- <HintPath>C:/Users/David/Documents/Unity5/ftlPhysics/ftlPhysics_v1.55/Assets/scripts/TouchScript/OSCsharp.dll</HintPath>
- </Reference>
  <Reference Include="TouchScript">
- <HintPath>C:/Users/David/Documents/Unity5/ftlPhysics/ftlPhysics_v1.55/Assets/scripts/TouchScript/TouchScript.dll</HintPath>
- </Reference>
- <Reference Include="TouchScript.TUIO">
- <HintPath>C:/Users/David/Documents/Unity5/ftlPhysics/ftlPhysics_v1.55/Assets/scripts/TouchScript/TouchScript.TUIO.dll</HintPath>
+ <HintPath>C:/Users/David/Documents/GitHub/ftlPhysics/Assets/TouchScript/Plugins/TouchScript.dll</HintPath>
  </Reference>
  <Reference Include="TouchScript.Windows">
- <HintPath>C:/Users/David/Documents/Unity5/ftlPhysics/ftlPhysics_v1.55/Assets/scripts/TouchScript/TouchScript.Windows.dll</HintPath>
+ <HintPath>C:/Users/David/Documents/GitHub/ftlPhysics/Assets/TouchScript/Plugins/TouchScript.Windows.dll</HintPath>
+ </Reference>
+ <Reference Include="TouchScript.TUIO">
+ <HintPath>C:/Users/David/Documents/GitHub/ftlPhysics/Assets/TouchScript/Plugins/TouchScript.TUIO.dll</HintPath>
+ </Reference>
+ <Reference Include="OSCsharp">
+ <HintPath>C:/Users/David/Documents/GitHub/ftlPhysics/Assets/TouchScript/Plugins/OSCsharp.dll</HintPath>
  </Reference>
  <Reference Include="TUIOsharp">
- <HintPath>C:/Users/David/Documents/Unity5/ftlPhysics/ftlPhysics_v1.55/Assets/scripts/TouchScript/TUIOsharp.dll</HintPath>
+ <HintPath>C:/Users/David/Documents/GitHub/ftlPhysics/Assets/TouchScript/Plugins/TUIOsharp.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>

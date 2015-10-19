@@ -34,7 +34,6 @@ public class ButtonSliders : MonoBehaviour
 		{
 			var clip = servoSound.clip;
 			servoSound.PlayOneShot(clip);
-			print ("Out: " + name);
 		}
 		StartCoroutine (Slide(showPosition, hidePosition, slideTime));
 	}
@@ -44,7 +43,6 @@ public class ButtonSliders : MonoBehaviour
 		{
 			var clip = servoSound.clip;
 			servoSound.PlayOneShot(clip);
-			print ("In: " + name);
 		}
 		StartCoroutine (Slide(hidePosition, showPosition, slideTime));
 	}

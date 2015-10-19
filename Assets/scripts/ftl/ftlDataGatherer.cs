@@ -24,12 +24,19 @@ public class ftlDataGatherer : ftlManager
 	public AudioSource firstTouchSound;
 	public AudioSource SliderSound;
 	public float sliderSoundVolume;
+    public Sprite tvBg;
+    public Sprite panelBg;
 //	private Dictionary <int, GameObject> scribblers = new Dictionary<int, GameObject>();
 
 
 	void Awake () 
 	{
-		GameFont = gameFont;
+        var bg = GameObject.Find("BG");
+        if (BezelTV)
+            bg.GetComponent<SpriteRenderer>().sprite = tvBg;
+        else
+            bg.GetComponent<SpriteRenderer>().sprite = panelBg;
+        GameFont = gameFont;
 		ftlTouches.Clear ();
 		graphPoints.Clear ();
 		FolderButton = folderButton;
@@ -78,7 +85,7 @@ public class ftlDataGatherer : ftlManager
 
 	void OnEnable()
 	{
-		SetupInitialRealTime ();
+        SetupInitialRealTime ();
 	}
 
 	private void OnGUI()
@@ -111,7 +118,10 @@ public class ftlDataGatherer : ftlManager
 
 	void Update()
 	{
-		#region Hotkeys
+        #region Hotkeys
+        if (RealTime && GameObject.Find("Clear").transform.position.x >= Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, 0, 0)).x)
+            GameObject.Find("Clear").GetComponent<ButtonSliders>().SlideIn();
+
 		if (Input.GetKey (KeyCode.LeftControl) || Input.GetKey (KeyCode.RightControl))
 		{
 			if (Input.GetKeyDown (KeyCode.C)) 
